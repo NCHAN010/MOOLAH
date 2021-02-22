@@ -1,0 +1,76 @@
+<h3>Create Constant Component</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label><b>Current user ID: </b></label> {{id}}
+      <br>
+      <label><b>Current user username: </b></label> {{moolahuser.userName}}
+      <br>
+      <label><b>Current user password: </b></label> {{moolahuser.password}}
+  <!--orgId:string;
+
+     userId:string;
+	duration:Time;
+ moolahTitle:string;
+ currAmt:number;
+ state:string;
+   -->
+    </div>
+    <div class="form-group">
+      
+      <label for="name">Title</label>
+      <input type="text" class="form-control" id="moolahTitle" required [(ngModel)]="constantC.moolahTitle" name="moolahTitle">
+    </div>
+
+
+    <div>
+  	
+<label for="name">Time Interval : </label>
+ <label for="name">Year</label>
+ <select name="year" [(ngModel)]="constantC.dYear" > <hr>
+ <option *ngFor="let number of yearArr" value="{{number}}">{{number}}</option>
+</select>
+&nbsp;
+<label for="name">Month</label>
+ <select name="month" [(ngModel)]="constantC.dMonth" >
+   <option *ngFor="let number of monthArr" value="{{number}}">{{number}}</option>
+</select>
+&nbsp;
+<label for="name">Day</label>
+ <select name="month" [(ngModel)]="constantC.dDay" >
+   <option *ngFor="let number of dayArr" value="{{number}}">{{number}}</option>
+</select>
+</div>
+
+    <div class="form-group">
+      <label for="name">Amount</label>
+      <input type="number" step="0.01" class="form-control" id="currAmt" required [(ngModel)]="constantC.currAmt" name="currAmt">
+    </div>
+
+  <div class="form-group">
+      <label for="name">State</label>
+    
+   <select id="state" required [(ngModel)]="constantC.state" name="state"> 
+        <option *ngFor="let c of current_state" [ngValue]="c" >{{c}} </option>
+        
+      </select>
+  
+    </div>
+
+
+    
+
+     <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <br>
+  <button (click)="list_userhomepage()" class="btn btn-primary">Homepage</button><br>
+ <!--  <button (click)="list_createSecondaryCom()" class="btn btn-primary">Create Secondary Component</button><br>
+  <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+
+

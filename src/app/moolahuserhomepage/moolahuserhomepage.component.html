@@ -1,0 +1,31 @@
+<h2>Welcome {{moolahuser.firstName}} {{moolahuser.lastName}}</h2> 
+
+<hr/>
+<div *ngIf="moolahuser">
+  <div>
+    <label><b>First Name: </b></label> {{moolahuser.firstName}}
+  </div>
+  <div>
+    <label><b>Last Name: </b></label> {{moolahuser.lastName}}
+  </div>
+  <div>
+    <label><b>Email Id: </b></label> {{moolahuser.emailId}}
+  </div>  
+</div>
+<div>
+    <label><b>Username: </b></label> {{moolahuser.userName}}
+  </div>
+  <div>
+    <label><b>Password: </b></label> {{moolahuser.password}}
+  </div>
+
+<br>
+<br>
+<div>
+ <button (click)="create_portfolio(moolahuser.userId)" class="btn btn-info" >Create Portfoliio</button>
+
+<button>Modify Portfolio</button> <br>
+<button>Savings -->Transport//Food//Miscellaneous</button>  <br>
+<button>Yearly Data</button>
+
+</div>

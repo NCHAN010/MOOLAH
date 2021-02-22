@@ -1,0 +1,56 @@
+<h3>Create moolahUser</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Username</label>
+      <input type="text" class="form-control" id="userName" required [(ngModel)]="moolahuser.userName" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Password</label>
+      <input type="text" class="form-control" id="password" required [(ngModel)]="moolahuser.password" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Email</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="moolahuser.emailId" name="emailId">
+    </div>
+
+
+        <div class="form-group">
+      <label for="name">Favourite Color</label><br>
+      <select id="favColor" required [(ngModel)]="moolahuser.favColor" name="favColor"> 
+        <option *ngFor="let c of colors" [ngValue]="c" >{{c}} </option>
+        
+      </select>
+    </div>
+  <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="moolahuser.firstName" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="moolahuser.lastName" name="emailId">
+    </div>
+
+      <div class="form-group">
+      <label for="name">Current Amount</label>
+      <input type="number" class="form-control" id="currAmt" required [(ngModel)]="moolahuser.currAmt" name="currAmt">
+    </div>
+
+
+
+     <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <br>
+  <button (click)="list()" class="btn btn-primary">Login</button><br>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+
+

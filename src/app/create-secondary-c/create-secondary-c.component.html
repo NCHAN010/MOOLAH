@@ -1,0 +1,50 @@
+<h3>Create Secondary Component</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label><b>Current user ID: </b></label> {{userId}}
+      <br>
+      <label><b>Current Primary Component Org ID: </b></label> {{primaryC.orgId}}
+      <br>
+      <label><b>Current Primary Title:  </b></label> {{primaryC.moolahTitle}}
+  <!-- 
+	secondaryId:string;
+	orgId:string;
+	moolahTitle:string;
+	limit:number;
+	currAmt:number;-->
+    </div>
+    <div class="form-group">
+      
+      <label for="name">Title</label>
+      <input type="text" class="form-control" id="moolahTitle" required [(ngModel)]="secondaryC.moolahTitle" name="moolahTitle">
+    </div>
+
+   
+
+    <div class="form-group">
+      <label for="name">Limit</label>
+      <input type="number" step="0.01" class="form-control" id="limit" required [(ngModel)]="secondaryC.limit" name="limit">
+    </div>
+
+  <div class="form-group">
+      <label for="name">Current Amount</label>
+      <input type="number" step="0.01" class="form-control" id="currAmt" required [(ngModel)]="secondaryC.currAmt" name="currAmt">
+    </div>
+
+    
+
+     <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <br>
+  <button (click)="list_userhomepage()" class="btn btn-primary">Homepage</button><br>
+  <button (click)="list_createSecondaryCom()" class="btn btn-primary">Create Secondary2 Component</button><br>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+
+
