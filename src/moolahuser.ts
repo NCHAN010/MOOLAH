@@ -10,7 +10,7 @@ export class moolahUser {
 	emailId: string;
 	favColor: string;
 
-
+	currAmt: number;	
 
 	userName: string;
 	password: string;

@@ -1,7 +1,17 @@
-<h2>Welcome {{moolahuser.firstName}} {{moolahuser.lastName}}</h2> 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Template</title>
+    
+  </head>
+  <body><h2>Welcome {{moolahuser.firstName}} {{moolahuser.lastName}}</h2> 
 
 <hr/>
-<div *ngIf="moolahuser">
+<div *ngIf="moolahuser" class="para">
   <div>
     <label><b>First Name: </b></label> {{moolahuser.firstName}}
   </div>
@@ -11,21 +21,25 @@
   <div>
     <label><b>Email Id: </b></label> {{moolahuser.emailId}}
   </div>  
-</div>
-<div>
+  <div>
     <label><b>Username: </b></label> {{moolahuser.userName}}
   </div>
   <div>
     <label><b>Password: </b></label> {{moolahuser.password}}
   </div>
-
+</div>
 <br>
 <br>
 <div>
- <button (click)="create_portfolio(moolahuser.userId)" class="btn btn-info" >Create Portfoliio</button>
+  <div class="para">
+ <button (click)="create_portfolio(moolahuser.userId)" class="buttonSS" >Create Portfoliio</button>
+<br>
+<button class="buttonSS" >Modify Portfolio</button> <br>
+<button class="buttonSS" >Savings -->Transport//Food//Miscellaneous</button>  <br>
+<button class="buttonSS" >Yearly Data</button>
 
-<button>Modify Portfolio</button> <br>
-<button>Savings -->Transport//Food//Miscellaneous</button>  <br>
-<button>Yearly Data</button>
-
+  </div>
+  <br><br><br><br><br><br><br><br>
 </div>
+
+</body>

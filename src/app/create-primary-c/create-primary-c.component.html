@@ -1,21 +1,34 @@
-<h3>Create Primary Component</h3>
-<div [hidden]="submitted" style="width: 400px;">
-  <form (ngSubmit)="onSubmit()">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+</head>
+<body>
+ <div class="pageTitle title">
+<h3 >Create Primary Component</h3></div>
+ <form (ngSubmit)="onSubmit()" class=form>
+<div [hidden]="submitted" style="width: 700px;">
+ 
     <div>
       <label><b>Current user ID: </b></label> {{id}}
-      <br>
+      <br><br><br>
       <label><b>Current user username: </b></label> {{moolahuser.userName}}
-      <br>
+      <br><br><br>
       <label><b>Current user password: </b></label> {{moolahuser.password}}
-  
+  		<br><br><br>
     </div>
     <div class="form-group">
       
-      <label for="name">Title</label>
+      <label for="name">Title</label> &nbsp;&nbsp;
       <input type="text" class="form-control" id="moolahTitle" required [(ngModel)]="primaryC.moolahTitle" name="moolahTitle">
     </div>
+<br><br><br>
 <div>
-  	<div class="input-group  col-sm-12">
+  	<div class="input-group  col-sm-12"> <label for="name">Goal Date</label> &nbsp;&nbsp;
   		<input class="form-control" placeholder="yyyy-mm-dd" id="tmp_dateCreated " required [(ngModel)]="tmp_dateCreated" name="tmp_dateCreated " ngbDatepicker #d="ngbDatepicker">
   		<div class="input-group-append">
     		<button 
@@ -24,13 +37,14 @@
       	type="button"><i class="fa fa-calendar"></i></button>
   		</div>
 	</div>
+	<br><br><br>
 <label for="name">Duration : </label>
- <label for="name">Year</label>
+ <label for="name">Year</label>&nbsp;
  <select name="year" [(ngModel)]="dYear" > <hr>
  <option *ngFor="let number of yearArr" value="{{number}}">{{number}}</option>
 </select>
 &nbsp;
-<label for="name">Month</label>
+<label for="name">Month</label>&nbsp;
  <select name="month" [(ngModel)]="dMonth" >
    <option *ngFor="let number of monthArr" value="{{number}}">{{number}}</option>
 </select>
@@ -42,44 +56,30 @@
     </div>
 -->
     <div class="form-group">
-      <label for="name">Limit</label>
+      <label for="name">Limit</label>&nbsp;&nbsp;
       <input type="number" step="0.01" class="form-control" id="limit" required [(ngModel)]="primaryC.limit" name="limit">
     </div>
-
+<br>
   	<div class="form-group">
-      <label for="name">Current Amount</label>
+      <label for="name">Current Amount</label>&nbsp;&nbsp;
       <input type="number" step="0.01" class="form-control" id="currAmt" required [(ngModel)]="primaryC.currAmt" name="currAmt">
     </div>
-
-
-	<!--<div>
-   	 <mat-form-field class="example-full-width" appearance="fill">
-  		<mat-label>Choose a date</mat-label>
-  	<input matInput[matDatepicker]="picker" placeholder="yyyy-mm-dd" id="date_created" required [(ngModel)]="primaryC.date_created" name="tmp_startDate" ngbDatepicker #d="ngbDatepicker">
-  	<mat-datepicker #picker></mat-datepicker>
-	</mat-form-field>
-	<div>
-	<button type="button" mat-raised-button (click)="picker.open()">Open</button>
-	</div>
-
-	</div>-->
-
-    <!--date_created-->
-    
-      
+<br>
+      <br>
    
-     <button type="submit" class="btn btn-success">Submit</button>
- </form>
+     <button type="submit" class="buttonSS">Submit</button>
+
 
 </div>
-
-
+ </form>
+<br><br><br><br><br><br>
 <div [hidden]="!submitted">
   <h4>You submitted successfully!</h4>
   <br>
-  <button (click)="list_userhomepage()" class="btn btn-primary">Homepage</button><br>
-  <button (click)="list_createSecondaryCom()" class="btn btn-primary">Create Secondary Component</button><br>
+  <button (click)="list_userhomepage()" class="buttonSS">Homepage</button><br>
+  <button (click)="list_createSecondaryCom()" class="buttonSS">Create Secondary Component</button><br>
   <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
 </div>
 
-
+</body>
+</html>

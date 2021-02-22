@@ -1,19 +1,34 @@
-<h3>Login</h3>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+</head>
+<body>
+    <form class="form" >
+ <div class="pageTitle title">
+<h3 >Login</h3></div>
+
 <div  style="width: 400px;">
-  <form >
+
     <div class="form-group">
       <label for="name">Username</label>
       <input type="text" class="form-control" id="username" required [(ngModel)]="moolahuser.userName" name="username">
     </div>
-
+<br><br>
     <div class="form-group">
       <label for="name">Password</label>
       <input type="text" class="form-control" id="password" required [(ngModel)]="moolahuser.password" name="password">
     </div>
-
+<br><br>
     
 
-    <button (click)="login_moolahUser(moolahuser.userName,moolahuser.password)" class="btn btn-info" >Log In</button>
-  </form>
+    <button (click)="login_moolahUser(moolahuser.userName,moolahuser.password)" class="buttonSS" >Log In</button>
+ 
+  <br><br><br><br><br><br><br><br><br><br><br>
 </div>
-
+</form>
+</body>

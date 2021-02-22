@@ -1,0 +1,29 @@
+body ,html{
+  background-color: powderblue;
+  font-family:"Courier New";
+ padding:0;
+   
+
+}
+
+.para
+{
+     background: #fff;
+  box-shadow: 0 30px 30px 0 rgba(90, 116, 148, 0.4);
+  border-radius: 5px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+   text-align: center;
+}
+
+.buttonSS{
+    font-family:"Courier New";
+ 
+  color: white;
+  background-color:darkblue;;
+  font-size: 13px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
